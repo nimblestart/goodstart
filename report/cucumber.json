@@ -1,0 +1,106 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Google search",
+    "line": 1,
+    "description": "",
+    "id": "google-search",
+    "uri": "features\\google_search.feature",
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "I'm on google home pge",
+        "line": 3,
+        "description": "",
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on google home page",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/google_search_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3110178000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario Outline",
+        "name": "when I type lotus, search result should display Lotus cars",
+        "line": 6,
+        "description": "",
+        "id": "google-search;when-i-type-lotus,-search-result-should-display-lotus-cars",
+        "type": "scenario_outline",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I fill in search query with <keyword>",
+            "line": 7,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 28,
+                  "val": "Lotus"
+                }
+              ],
+              "location": "features/step_definitions/google_search_steps.rb:5"
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click on google search",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/google_search_steps.rb:11"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see <result>",
+            "line": 9,
+            "match": {
+              "arguments": [
+                {
+                  "offset": 13,
+                  "val": "Lotus cars:home"
+                }
+              ],
+              "location": "features/step_definitions/google_search_steps.rb:16"
+            }
+          }
+        ],
+        "examples": [
+          {
+            "keyword": "Examples",
+            "name": "",
+            "line": 10,
+            "description": "",
+            "id": "google-search;when-i-type-lotus,-search-result-should-display-lotus-cars;",
+            "rows": [
+              {
+                "cells": [
+                  "keyword",
+                  "result"
+                ],
+                "line": 11,
+                "id": "google-search;when-i-type-lotus,-search-result-should-display-lotus-cars;;1"
+              },
+              {
+                "cells": [
+                  "Lotus",
+                  "Lotus cars:home"
+                ],
+                "line": 12,
+                "id": "google-search;when-i-type-lotus,-search-result-should-display-lotus-cars;;2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
