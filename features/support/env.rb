@@ -6,7 +6,7 @@ require 'rspec/expectations'
 require 'headless'
 
 require_relative '../support/hooks'
-require_relative '../lib/screenshot'
+require_relative '../lib/output_capture_helper'
 require_relative '../lib/browser'
 require_relative '../lib/pages/google_search_page'
 
